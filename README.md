@@ -73,13 +73,14 @@ bilibili.output-path=F:\\database\\audio\\%(title)s.%(ext)s
 
 本项目需要以下外部工具（不在仓库中）：
 
-| 工具 | 路径 | 用途 |
+| 工具 | 环境变量 | 用途 |
 |------|------|------|
-| yt-dlp.exe | 用户 Python Scripts 目录 | 下载网络视频/提取音频 |
-| ffmpeg.exe | F:\util\video_voice_utils\ffmpeg\bin\ | 音视频格式转换 |
+| yt-dlp.exe | `YT_DLP_PATH` | 下载网络视频/提取音频 |
+| ffmpeg.exe | `FFMPEG_PATH` | 音视频格式转换 |
 
 ## 注意事项
 
 - 首次调用 API 时会自动打开浏览器窗口，需扫码登录B站
 - Cookie 文件路径需有效，登录态会自动保存复用
 - 网络视频提取输出目录：`F:\database\audio\`
+- **环境变量**：需设置 `YT_DLP_PATH` 和 `FFMPEG_PATH` 系统环境变量指向工具路径
